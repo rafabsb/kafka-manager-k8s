@@ -8,13 +8,11 @@ RUN yum update -y && \
     yum clean all
 
 ENV JAVA_HOME=/usr/java/default/ \
-    KM_VERSION=1.3.1.8 \
-    KM_REVISION=97329cc8bf462723232ee73dc6702c064b5908eb \
+    KM_VERSION=1.3.3.14 \
+    KM_REVISION=04907ee737757369653969aadb6e1668c013fad2 \
     KM_CONFIGFILE="conf/application.conf"
 
-ADD kafka-manager-help.sh /kafka-manager-${KM_VERSION}/kafka-manager-help.sh
-
-RUN yum install -y java-1.8.0-openjdk-devel git wget unzip which && \
+RUN yum install -y java-1.8.0-openjdk-devel git wget unzip which nc && \
     mkdir -p /tmp && \
     cd /tmp && \
     git clone https://github.com/yahoo/kafka-manager && \
