@@ -7,6 +7,9 @@
 
 ## Howto
 ### Quick Start
+
+First, in order to have kafka cluster installed in kubernetes, install  _**rafabsb/kubernetes-kafka**_
+
 This is just a quick and clean install of yahoo/kafka-manager. It should be started in a kubernetes cluster.
 
 Refer to yahoo/kafka-manager for further app configuration.
